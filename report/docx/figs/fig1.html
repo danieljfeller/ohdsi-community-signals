@@ -1,0 +1,61 @@
+<!doctype html><html data-theme="light"><head><meta charset="utf-8"><style>
+/* Layout: a single reading column (65ch) for prose; figures break out to 760px and sit on a chart surface with a numbered caption, journal style. */
+:root{
+  --bg:#f6f7f8; --surface:#fcfcfb; --fg:#15181c; --fg2:#4d5560; --muted:#848b94; --grid:#e3e5e8; --axis:#c2c7cd; --border:rgba(21,24,28,.10);
+  --accent:#2a78d6; --m1:#2a78d6; --m2:#eb6834; --m3:#1baf7a; --mg:#b9bec5;
+  --o1:#184f95; --o2:#256abf; --o3:#5598e7; --o4:#86b6ef; --bandA:rgba(42,120,214,.06); --bandB:rgba(42,120,214,.02);
+  --wash:rgba(42,120,214,.14); --quote:#eef3fa;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif; --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#111417; --surface:#1a1d21; --fg:#f2f3f4; --fg2:#c3c7cc; --muted:#8c929a; --grid:#2b3036; --axis:#3a4047; --border:rgba(255,255,255,.10);
+  --accent:#3987e5; --m1:#3987e5; --m2:#d95926; --m3:#199e70; --mg:#4a5058;
+  --o1:#184f95; --o2:#256abf; --o3:#5598e7; --o4:#86b6ef; --bandA:rgba(57,135,229,.10); --bandB:rgba(57,135,229,.04); --wash:rgba(57,135,229,.18); --quote:#1d242e; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#111417; --surface:#1a1d21; --fg:#f2f3f4; --fg2:#c3c7cc; --muted:#8c929a; --grid:#2b3036; --axis:#3a4047; --border:rgba(255,255,255,.10);
+  --accent:#3987e5; --m1:#3987e5; --m2:#d95926; --m3:#199e70; --mg:#4a5058;
+  --o1:#184f95; --o2:#256abf; --o3:#5598e7; --o4:#86b6ef; --bandA:rgba(57,135,229,.10); --bandB:rgba(57,135,229,.04); --wash:rgba(57,135,229,.18); --quote:#1d242e; color-scheme:dark }
+body{background:var(--bg);color:var(--fg);font-family:var(--serif);font-size:19px;line-height:1.55;margin:0;padding-block:0 64px;padding-inline:16px}
+.wrap{max-width:760px;margin:0 auto}
+.prose{max-width:65ch;margin:0 auto}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,6vw,52px);font-weight:500;letter-spacing:-.01em;margin-top:56px}
+h2{font-size:clamp(25px,3.6vw,31px);font-weight:500;margin-top:56px;margin-bottom:14px}
+h3{font-size:21px;font-weight:600;margin-top:28px;margin-bottom:8px}
+p{margin:0 0 1.1em}
+.kicker{font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg2);margin-top:40px}
+.standfirst{font-size:23px;line-height:1.4;color:var(--fg2);margin:18px 0 10px;font-weight:400}
+.byline{font-family:var(--sans);font-size:14px;color:var(--muted);margin:14px 0 44px;display:flex;gap:18px;flex-wrap:wrap}
+.abstract{border-top:1px solid var(--fg);border-bottom:1px solid var(--border);padding:20px 0 8px;margin:0 0 40px;font-size:17px;line-height:1.5}
+.abstract dt{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg2);margin-top:12px}
+.abstract dd{margin:4px 0 0}
+.figure{background:var(--surface);border:1px solid var(--border);padding:18px 20px 14px;margin:30px 0 36px;font-family:var(--sans)}
+.figure .fig{width:100%;height:auto;display:block}
+figcaption{font-size:14px;line-height:1.5;color:var(--fg2);margin-top:12px}
+figcaption b{color:var(--fg);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:13px;color:var(--fg2);margin-top:10px}
+.sw{display:inline-block;width:12px;height:12px;margin-right:7px;vertical-align:-1px}
+.sw.round{border-radius:50%}
+.m1{fill:var(--m1);background:var(--m1)} .m2{fill:var(--m2);background:var(--m2)} .m3{fill:var(--m3);background:var(--m3)} .mg{fill:var(--mg);background:var(--mg)}
+.o1{fill:var(--o1);background:var(--o1)} .o2{fill:var(--o2);background:var(--o2)} .o3{fill:var(--o3);background:var(--o3)} .o4{fill:var(--o4);background:var(--o4)}
+.grid{stroke:var(--grid);stroke-width:1} .axis{stroke:var(--axis);stroke-width:1} .bracket{fill:none;stroke:var(--fg2);stroke-width:1} .leader{stroke:var(--axis);stroke-width:1}
+.tick{font-family:var(--sans);font-size:12px;fill:var(--muted)} .lbl{font-family:var(--sans);font-size:12.5px;fill:var(--fg2)} .inlbl{font-family:var(--sans);font-size:12px;fill:#fff;font-weight:600}
+.bub{fill:var(--wash);stroke:var(--m1);stroke-width:2}
+.dotf{fill:var(--m1);stroke:var(--surface);stroke-width:2;background:var(--m1)} .doto{fill:var(--surface);stroke:var(--m1);stroke-width:2;background:transparent;box-shadow:inset 0 0 0 2px var(--m1)}
+.bandA{fill:var(--bandA)} .bandB{fill:var(--bandB)}
+rect.m1,rect.m2,rect.m3,rect.mg,rect.o1,rect.o2,rect.o3,rect.o4{rx:0}
+.tbl{margin-top:10px;font-size:13px;color:var(--fg2)} .tbl summary{cursor:pointer;color:var(--accent)} .tbl table{border-collapse:collapse;margin-top:8px;width:100%;font-variant-numeric:tabular-nums} .tbl th,.tbl td{text-align:left;padding:4px 8px;border-bottom:1px solid var(--grid)} .tbl th{font-weight:600;color:var(--fg)}
+.tblwrap{overflow-x:auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0 8px;font-family:var(--sans)}
+.stat{border-top:2px solid var(--fg);padding-top:10px} .stat b{display:block;font-size:34px;font-weight:600;line-height:1.1;color:var(--fg)} .stat span{display:block;font-size:13px;color:var(--fg2);margin-top:6px;line-height:1.35}
+blockquote{margin:22px 0;padding:14px 20px;background:var(--quote);border-left:3px solid var(--accent);font-style:italic;font-size:18px;color:var(--fg)}
+blockquote cite{display:block;font-style:normal;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:6px}
+.note{font-family:var(--sans);font-size:15px;line-height:1.5;color:var(--fg2);border:1px solid var(--border);padding:16px 18px;margin:28px 0}
+.note h3{font-family:var(--sans);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:var(--fg)}
+ul,ol{padding-left:1.2em} li{margin-bottom:.45em}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.foot{font-family:var(--sans);font-size:14px;color:var(--muted);border-top:1px solid var(--border);margin-top:56px;padding-top:18px;line-height:1.55}
+@media (max-width:520px){ body{font-size:17px} .figure{padding:12px 10px} .standfirst{font-size:20px} }
+@media (prefers-reduced-motion: no-preference){ details[open] summary ~ *{animation:fade .25s ease} } @keyframes fade{from{opacity:.3}to{opacity:1}}
+</style><style>html,body{margin:0;background:#fcfcfb} .figwrap{width:1300px;padding:10px 0 0 0} .legend{font-size:22px;gap:14px 34px;margin-top:16px} .sw{width:20px;height:20px;margin-right:10px}</style></head><body><div class="figwrap"><svg class="fig" viewBox="0 0 680 420" role="img" aria-labelledby="f3t"><title id="f3t">Lifecycle stages by volume and severity</title><line x1="56" x2="510.0" y1="372.0" y2="372.0" class="grid"/><text x="48" y="376.0" class="tick" text-anchor="end">1.0</text><line x1="56" x2="510.0" y1="257.3" y2="257.3" class="grid"/><text x="48" y="261.3" class="tick" text-anchor="end">1.5</text><line x1="56" x2="510.0" y1="142.7" y2="142.7" class="grid"/><text x="48" y="146.7" class="tick" text-anchor="end">2.0</text><line x1="56" x2="510.0" y1="28.0" y2="28.0" class="grid"/><text x="48" y="32.0" class="tick" text-anchor="end">2.5</text><line y1="28" y2="372" x1="56.0" x2="56.0" class="grid"/><text y="390" x="56.0" class="tick" text-anchor="middle">0</text><line y1="28" y2="372" x1="137.1" x2="137.1" class="grid"/><text y="390" x="137.1" class="tick" text-anchor="middle">25</text><line y1="28" y2="372" x1="218.1" x2="218.1" class="grid"/><text y="390" x="218.1" class="tick" text-anchor="middle">50</text><line y1="28" y2="372" x1="299.2" x2="299.2" class="grid"/><text y="390" x="299.2" class="tick" text-anchor="middle">75</text><line y1="28" y2="372" x1="380.3" x2="380.3" class="grid"/><text y="390" x="380.3" class="tick" text-anchor="middle">100</text><line y1="28" y2="372" x1="461.4" x2="461.4" class="grid"/><text y="390" x="461.4" class="tick" text-anchor="middle">125</text><text x="283.0" y="412" class="lbl" text-anchor="middle">Need threads tagged with the stage</text><text transform="translate(14 200.0) rotate(-90)" class="lbl" text-anchor="middle">Mean severity (0 none to 3 blocker)</text><circle cx="263.5" cy="85.3" r="19.4" class="bub"><title>Infrastructure & deployment: 64 need threads, mean severity 2.25, 36% blockers</title></circle><circle cx="107.9" cy="142.7" r="15.0" class="bub"><title>Governance & privacy: 16 need threads, mean severity 2.00, 25% blockers</title></circle><circle cx="107.9" cy="142.7" r="12.5" class="bub"><title>Estimation: 16 need threads, mean severity 2.00, 19% blockers</title></circle><circle cx="250.6" cy="165.6" r="11.7" class="bub"><title>Data quality: 60 need threads, mean severity 1.90, 17% blockers</title></circle><circle cx="75.5" cy="219.0" r="11.7" class="bub"><title>Results sharing: 6 need threads, mean severity 1.67, 17% blockers</title></circle><circle cx="169.5" cy="201.6" r="10.7" class="bub"><title>Characterization: 35 need threads, mean severity 1.74, 14% blockers</title></circle><circle cx="153.3" cy="257.3" r="6.3" class="bub"><title>Community process: 30 need threads, mean severity 1.50, 3% blockers</title></circle><circle cx="182.5" cy="231.0" r="6.0" class="bub"><title>Cohort definition: 39 need threads, mean severity 1.61, 3% blockers</title></circle><circle cx="467.8" cy="225.7" r="6.0" class="bub"><title>Vocabulary mapping: 127 need threads, mean severity 1.64, 2% blockers</title></circle><circle cx="425.7" cy="221.1" r="5.7" class="bub"><title>ETL / CDM conversion: 114 need threads, mean severity 1.66, 2% blockers</title></circle><circle cx="98.2" cy="178.0" r="5.0" class="bub"><title>Network study execution: 13 need threads, mean severity 1.85, 0% blockers</title></circle><circle cx="137.1" cy="335.3" r="5.0" class="bub"><title>Learning & onboarding: 25 need threads, mean severity 1.16, 0% blockers</title></circle><circle cx="98.2" cy="195.6" r="5.0" class="bub"><title>Prediction / ML: 13 need threads, mean severity 1.77, 0% blockers</title></circle><text x="288.9" y="89.3" class="lbl">Infrastructure & deployment <tspan class="tick">(64)</tspan></text><text x="268.3" y="169.6" class="lbl">Data quality <tspan class="tick">(60)</tspan></text><text x="186.2" y="205.6" class="lbl">Characterization <tspan class="tick">(35)</tspan></text><text x="148.1" y="339.3" class="lbl">Learning & onboarding <tspan class="tick">(25)</tspan></text><text x="165.6" y="261.3" class="lbl">Community process <tspan class="tick">(30)</tspan></text><line x1="462.9" y1="229.0" x2="367.3" y2="294.0" class="leader"/><text x="371.3" y="298.0" class="lbl" text-anchor="start">Vocabulary mapping <tspan class="tick">(127)</tspan></text><line x1="420.4" y1="223.2" x2="334.9" y2="257.3" class="leader"/><text x="338.9" y="261.3" class="lbl" text-anchor="start">ETL / CDM conversion <tspan class="tick">(114)</tspan></text><line x1="102.3" y1="128.8" x2="69.0" y2="46.3" class="leader"/><text x="73.0" y="50.3" class="lbl" text-anchor="start">Governance & privacy <tspan class="tick">(16)</tspan></text><line x1="102.0" y1="131.6" x2="69.0" y2="69.3" class="leader"/><text x="73.0" y="73.3" class="lbl" text-anchor="start">Estimation <tspan class="tick">(16)</tspan></text><line x1="96.5" y1="173.3" x2="69.0" y2="96.8" class="leader"/><text x="73.0" y="100.8" class="lbl" text-anchor="start">Network study execution <tspan class="tick">(13)</tspan></text><line x1="100.9" y1="191.5" x2="133.8" y2="142.7" class="leader"/><text x="137.8" y="146.7" class="lbl" text-anchor="start">Prediction / ML <tspan class="tick">(13)</tspan></text><line x1="184.4" y1="236.7" x2="198.7" y2="280.3" class="leader"/><text x="202.7" y="284.3" class="lbl" text-anchor="start">Cohort definition <tspan class="tick">(39)</tspan></text><line x1="72.3" y1="230.3" x2="56.0" y2="289.4" class="leader"/><text x="60.0" y="293.4" class="lbl" text-anchor="start">Results sharing <tspan class="tick">(6)</tspan></text><text x="510.0" y="20" class="tick" text-anchor="end">Bubble radius encodes share of threads rated blocker; hover for values</text></svg></div></body></html>

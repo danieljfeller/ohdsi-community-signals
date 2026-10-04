@@ -1,0 +1,9 @@
+field,percent_agreement,cohen_kappa
+post_type,0.78,0.7
+severity,0.74,0.6
+resolution_status,0.54,0.36
+multi_site_context,0.94,0.59
+harmonization_context,0.9,0.77
+workaround_present,0.89,0.51
+pain_point_present,0.95,0.9
+lifecycle_stage (mean Jaccard),0.69,

@@ -1,0 +1,925 @@
+{
+ "composition": {
+  "2024 Q4": {
+   "question": 48,
+   "bug": 13,
+   "discussion": 6,
+   "feature_request": 7,
+   "announcement": 17,
+   "job_or_event": 10,
+   "other": 0
+  },
+  "2025 Q1": {
+   "question": 45,
+   "bug": 17,
+   "discussion": 13,
+   "feature_request": 2,
+   "announcement": 34,
+   "job_or_event": 8,
+   "other": 0
+  },
+  "2025 Q2": {
+   "question": 33,
+   "bug": 15,
+   "discussion": 9,
+   "feature_request": 2,
+   "announcement": 37,
+   "job_or_event": 2,
+   "other": 1
+  },
+  "2025 Q3": {
+   "question": 33,
+   "bug": 11,
+   "discussion": 17,
+   "feature_request": 4,
+   "announcement": 40,
+   "job_or_event": 11,
+   "other": 1
+  },
+  "2025 Q4": {
+   "question": 21,
+   "bug": 10,
+   "discussion": 6,
+   "feature_request": 1,
+   "announcement": 18,
+   "job_or_event": 2,
+   "other": 0
+  },
+  "2026 Q1": {
+   "question": 24,
+   "bug": 5,
+   "discussion": 4,
+   "feature_request": 2,
+   "announcement": 41,
+   "job_or_event": 13,
+   "other": 0
+  },
+  "2026 Q2": {
+   "question": 22,
+   "bug": 3,
+   "discussion": 14,
+   "feature_request": 3,
+   "announcement": 38,
+   "job_or_event": 7,
+   "other": 2
+  },
+  "2026 Q3": {
+   "question": 21,
+   "bug": 2,
+   "discussion": 12,
+   "feature_request": 4,
+   "announcement": 47,
+   "job_or_event": 15,
+   "other": 0
+  }
+ },
+ "resolution": {
+  "no_reply": 124,
+  "partially": 113,
+  "resolved": 113,
+  "unresolved": 62,
+  "unclear": 12,
+  "resolved_self": 5
+ },
+ "lifecycle": [
+  {
+   "lifecycle_stage": "data_quality",
+   "n_need_threads": 60,
+   "unresolved_rate": 0.8,
+   "mean_severity": 1.9,
+   "blocker_share": 0.167,
+   "multi_site_share": 0.117,
+   "unmet_need_index": 0.798
+  },
+  {
+   "lifecycle_stage": "infrastructure_deployment",
+   "n_need_threads": 64,
+   "unresolved_rate": 0.75,
+   "mean_severity": 2.25,
+   "blocker_share": 0.359,
+   "multi_site_share": 0.031,
+   "unmet_need_index": 0.786
+  },
+  {
+   "lifecycle_stage": "characterization",
+   "n_need_threads": 35,
+   "unresolved_rate": 0.8,
+   "mean_severity": 1.743,
+   "blocker_share": 0.143,
+   "multi_site_share": 0.257,
+   "unmet_need_index": 0.645
+  },
+  {
+   "lifecycle_stage": "estimation",
+   "n_need_threads": 16,
+   "unresolved_rate": 0.812,
+   "mean_severity": 2.0,
+   "blocker_share": 0.188,
+   "multi_site_share": 0.25,
+   "unmet_need_index": 0.627
+  },
+  {
+   "lifecycle_stage": "etl_cdm_conversion",
+   "n_need_threads": 114,
+   "unresolved_rate": 0.667,
+   "mean_severity": 1.658,
+   "blocker_share": 0.018,
+   "multi_site_share": 0.07,
+   "unmet_need_index": 0.612
+  },
+  {
+   "lifecycle_stage": "vocabulary_mapping",
+   "n_need_threads": 127,
+   "unresolved_rate": 0.638,
+   "mean_severity": 1.638,
+   "blocker_share": 0.024,
+   "multi_site_share": 0.063,
+   "unmet_need_index": 0.604
+  },
+  {
+   "lifecycle_stage": "community_process",
+   "n_need_threads": 30,
+   "unresolved_rate": 0.867,
+   "mean_severity": 1.5,
+   "blocker_share": 0.033,
+   "multi_site_share": 0.267,
+   "unmet_need_index": 0.586
+  },
+  {
+   "lifecycle_stage": "governance_privacy",
+   "n_need_threads": 16,
+   "unresolved_rate": 0.688,
+   "mean_severity": 2.0,
+   "blocker_share": 0.25,
+   "multi_site_share": 0.125,
+   "unmet_need_index": 0.495
+  },
+  {
+   "lifecycle_stage": "network_study_execution",
+   "n_need_threads": 13,
+   "unresolved_rate": 0.692,
+   "mean_severity": 1.846,
+   "blocker_share": 0.0,
+   "multi_site_share": 0.615,
+   "unmet_need_index": 0.461
+  },
+  {
+   "lifecycle_stage": "learning_onboarding",
+   "n_need_threads": 25,
+   "unresolved_rate": 0.76,
+   "mean_severity": 1.16,
+   "blocker_share": 0.0,
+   "multi_site_share": 0.04,
+   "unmet_need_index": 0.461
+  },
+  {
+   "lifecycle_stage": "cohort_definition",
+   "n_need_threads": 39,
+   "unresolved_rate": 0.538,
+   "mean_severity": 1.615,
+   "blocker_share": 0.026,
+   "multi_site_share": 0.103,
+   "unmet_need_index": 0.429
+  },
+  {
+   "lifecycle_stage": "prediction_ml",
+   "n_need_threads": 13,
+   "unresolved_rate": 0.692,
+   "mean_severity": 1.769,
+   "blocker_share": 0.0,
+   "multi_site_share": 0.308,
+   "unmet_need_index": 0.404
+  },
+  {
+   "lifecycle_stage": "results_sharing_dissemination",
+   "n_need_threads": 6,
+   "unresolved_rate": 0.5,
+   "mean_severity": 1.667,
+   "blocker_share": 0.167,
+   "multi_site_share": 0.333,
+   "unmet_need_index": 0.211
+  }
+ ],
+ "needs": [
+  {
+   "cluster": 2,
+   "label": "Mapping complex source data to OMOP",
+   "n_need_threads": 26,
+   "unresolved_rate": 0.769,
+   "mean_severity": 1.654,
+   "unmet_need_index": 0.74,
+   "rhino_fit": "data_harmonization",
+   "confidence": "high"
+  },
+  {
+   "cluster": 5,
+   "label": "Representing genomic and omics data in OMOP",
+   "n_need_threads": 19,
+   "unresolved_rate": 0.789,
+   "mean_severity": 1.789,
+   "unmet_need_index": 0.734,
+   "rhino_fit": "data_harmonization",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 8,
+   "label": "Extending OMOP for AI and interoperability",
+   "n_need_threads": 18,
+   "unresolved_rate": 0.944,
+   "mean_severity": 1.5,
+   "unmet_need_index": 0.711,
+   "rhino_fit": "none",
+   "confidence": "low"
+  },
+  {
+   "cluster": 1,
+   "label": "Missing vocabulary concepts for source codes",
+   "n_need_threads": 31,
+   "unresolved_rate": 0.742,
+   "mean_severity": 1.613,
+   "unmet_need_index": 0.709,
+   "rhino_fit": "data_harmonization",
+   "confidence": "high"
+  },
+  {
+   "cluster": 0,
+   "label": "Expressing complex cohort logic in ATLAS",
+   "n_need_threads": 32,
+   "unresolved_rate": 0.594,
+   "mean_severity": 1.969,
+   "unmet_need_index": 0.693,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 3,
+   "label": "Fixing OMOP vocabulary content defects",
+   "n_need_threads": 24,
+   "unresolved_rate": 0.708,
+   "mean_severity": 1.667,
+   "unmet_need_index": 0.686,
+   "rhino_fit": "data_harmonization",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 17,
+   "label": "Running Achilles at scale",
+   "n_need_threads": 10,
+   "unresolved_rate": 0.9,
+   "mean_severity": 2.4,
+   "unmet_need_index": 0.682,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 15,
+   "label": "Installing ATLAS and WebAPI",
+   "n_need_threads": 10,
+   "unresolved_rate": 0.8,
+   "mean_severity": 2.5,
+   "unmet_need_index": 0.665,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 9,
+   "label": "Community coordination, training and documentation",
+   "n_need_threads": 17,
+   "unresolved_rate": 0.824,
+   "mean_severity": 1.059,
+   "unmet_need_index": 0.643,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 7,
+   "label": "Validating cohort comparability across sites",
+   "n_need_threads": 18,
+   "unresolved_rate": 0.667,
+   "mean_severity": 1.611,
+   "unmet_need_index": 0.602,
+   "rhino_fit": "federated_analytics",
+   "confidence": "low"
+  },
+  {
+   "cluster": 16,
+   "label": "Configuring ATLAS authentication and permissions",
+   "n_need_threads": 10,
+   "unresolved_rate": 0.7,
+   "mean_severity": 2.7,
+   "unmet_need_index": 0.594,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 6,
+   "label": "CDM conventions for drugs, visits and types",
+   "n_need_threads": 19,
+   "unresolved_rate": 0.579,
+   "mean_severity": 1.684,
+   "unmet_need_index": 0.553,
+   "rhino_fit": "data_harmonization",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 4,
+   "label": "CDM conventions for observation periods and events",
+   "n_need_threads": 20,
+   "unresolved_rate": 0.6,
+   "mean_severity": 1.5,
+   "unmet_need_index": 0.528,
+   "rhino_fit": "data_harmonization",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 20,
+   "label": "Hosting and integrating HADES infrastructure",
+   "n_need_threads": 8,
+   "unresolved_rate": 0.75,
+   "mean_severity": 1.875,
+   "unmet_need_index": 0.512,
+   "rhino_fit": "none",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 22,
+   "label": "Large measurement tables and duplicate rows",
+   "n_need_threads": 7,
+   "unresolved_rate": 0.714,
+   "mean_severity": 2.286,
+   "unmet_need_index": 0.492,
+   "rhino_fit": "none",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 27,
+   "label": "OHDSI support for Trino, Spark and Doris",
+   "n_need_threads": 4,
+   "unresolved_rate": 1.0,
+   "mean_severity": 2.0,
+   "unmet_need_index": 0.483,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 19,
+   "label": "Running DataQualityDashboard on SQL Server",
+   "n_need_threads": 8,
+   "unresolved_rate": 0.625,
+   "mean_severity": 2.375,
+   "unmet_need_index": 0.454,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 12,
+   "label": "Modeling oncology episodes and treatments",
+   "n_need_threads": 13,
+   "unresolved_rate": 0.615,
+   "mean_severity": 1.615,
+   "unmet_need_index": 0.451,
+   "rhino_fit": "data_harmonization",
+   "confidence": "high"
+  },
+  {
+   "cluster": 11,
+   "label": "Richer, portable phenotype and concept definitions",
+   "n_need_threads": 14,
+   "unresolved_rate": 0.643,
+   "mean_severity": 1.286,
+   "unmet_need_index": 0.441,
+   "rhino_fit": "none",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 18,
+   "label": "Reusable ETL pipelines into OMOP",
+   "n_need_threads": 9,
+   "unresolved_rate": 0.667,
+   "mean_severity": 1.667,
+   "unmet_need_index": 0.425,
+   "rhino_fit": "data_harmonization",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 26,
+   "label": "Representing clinical notes and NLP output",
+   "n_need_threads": 6,
+   "unresolved_rate": 1.0,
+   "mean_severity": 1.333,
+   "unmet_need_index": 0.407,
+   "rhino_fit": "data_harmonization",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 13,
+   "label": "Validating CDM compliance and structure",
+   "n_need_threads": 13,
+   "unresolved_rate": 0.538,
+   "mean_severity": 1.615,
+   "unmet_need_index": 0.399,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 23,
+   "label": "Deploying Broadsea reliably",
+   "n_need_threads": 6,
+   "unresolved_rate": 0.667,
+   "mean_severity": 2.0,
+   "unmet_need_index": 0.39,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 14,
+   "label": "CPT4 vocabulary processing and tool failures",
+   "n_need_threads": 10,
+   "unresolved_rate": 0.3,
+   "mean_severity": 2.1,
+   "unmet_need_index": 0.389,
+   "rhino_fit": "none",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 10,
+   "label": "Domain assignment for labs and measurements",
+   "n_need_threads": 14,
+   "unresolved_rate": 0.5,
+   "mean_severity": 1.571,
+   "unmet_need_index": 0.386,
+   "rhino_fit": "data_harmonization",
+   "confidence": "high"
+  },
+  {
+   "cluster": 28,
+   "label": "Vocabulary release accuracy and maintenance",
+   "n_need_threads": 4,
+   "unresolved_rate": 0.75,
+   "mean_severity": 1.75,
+   "unmet_need_index": 0.364,
+   "rhino_fit": "none",
+   "confidence": "high"
+  },
+  {
+   "cluster": 21,
+   "label": "Incorrect ICD-10 to SNOMED mappings",
+   "n_need_threads": 7,
+   "unresolved_rate": 0.571,
+   "mean_severity": 1.714,
+   "unmet_need_index": 0.353,
+   "rhino_fit": "data_harmonization",
+   "confidence": "high"
+  },
+  {
+   "cluster": 24,
+   "label": "Creating and maintaining ATLAS concept sets",
+   "n_need_threads": 6,
+   "unresolved_rate": 0.5,
+   "mean_severity": 1.833,
+   "unmet_need_index": 0.259,
+   "rhino_fit": "none",
+   "confidence": "medium"
+  },
+  {
+   "cluster": 25,
+   "label": "ATC to RxNorm drug mapping",
+   "n_need_threads": 6,
+   "unresolved_rate": 0.667,
+   "mean_severity": 1.333,
+   "unmet_need_index": 0.259,
+   "rhino_fit": "data_harmonization",
+   "confidence": "high"
+  }
+ ],
+ "multisite_q": {
+  "2024 Q4": {
+   "n": 2,
+   "unmet": 2
+  },
+  "2025 Q1": {
+   "n": 7,
+   "unmet": 6
+  },
+  "2025 Q2": {
+   "n": 3,
+   "unmet": 3
+  },
+  "2025 Q3": {
+   "n": 8,
+   "unmet": 4
+  },
+  "2025 Q4": {
+   "n": 4,
+   "unmet": 4
+  },
+  "2026 Q1": {
+   "n": 5,
+   "unmet": 5
+  },
+  "2026 Q2": {
+   "n": 6,
+   "unmet": 5
+  },
+  "2026 Q3": {
+   "n": 11,
+   "unmet": 11
+  }
+ },
+ "multisite_total": {
+  "n": 46,
+  "unmet": 40,
+  "all_n": 429,
+  "all_unmet": 299
+ },
+ "kappa": [
+  {
+   "field": "post_type",
+   "percent_agreement": 0.78,
+   "cohen_kappa": 0.7
+  },
+  {
+   "field": "severity",
+   "percent_agreement": 0.74,
+   "cohen_kappa": 0.6
+  },
+  {
+   "field": "resolution_status",
+   "percent_agreement": 0.54,
+   "cohen_kappa": 0.36
+  },
+  {
+   "field": "multi_site_context",
+   "percent_agreement": 0.94,
+   "cohen_kappa": 0.59
+  },
+  {
+   "field": "harmonization_context",
+   "percent_agreement": 0.9,
+   "cohen_kappa": 0.77
+  },
+  {
+   "field": "workaround_present",
+   "percent_agreement": 0.89,
+   "cohen_kappa": 0.51
+  },
+  {
+   "field": "pain_point_present",
+   "percent_agreement": 0.95,
+   "cohen_kappa": 0.9
+  },
+  {
+   "field": "lifecycle_stage (mean Jaccard)",
+   "percent_agreement": 0.69,
+   "cohen_kappa": NaN
+  }
+ ],
+ "unmet_q": {
+  "2024 Q4": {
+   "n": 74,
+   "unmet": 0.743,
+   "noreply": 0.297
+  },
+  "2025 Q1": {
+   "n": 77,
+   "unmet": 0.494,
+   "noreply": 0.273
+  },
+  "2025 Q2": {
+   "n": 59,
+   "unmet": 0.814,
+   "noreply": 0.322
+  },
+  "2025 Q3": {
+   "n": 65,
+   "unmet": 0.508,
+   "noreply": 0.262
+  },
+  "2025 Q4": {
+   "n": 38,
+   "unmet": 0.763,
+   "noreply": 0.158
+  },
+  "2026 Q1": {
+   "n": 35,
+   "unmet": 0.8,
+   "noreply": 0.2
+  },
+  "2026 Q2": {
+   "n": 42,
+   "unmet": 0.905,
+   "noreply": 0.405
+  },
+  "2026 Q3": {
+   "n": 39,
+   "unmet": 0.769,
+   "noreply": 0.385
+  }
+ },
+ "tools": [
+  {
+   "t": "CommonDataModel",
+   "n": 134,
+   "unresolved": 0.68
+  },
+  {
+   "t": "Atlas",
+   "n": 110,
+   "unresolved": 0.72
+  },
+  {
+   "t": "Vocabulary",
+   "n": 107,
+   "unresolved": 0.66
+  },
+  {
+   "t": "Athena",
+   "n": 83,
+   "unresolved": 0.66
+  },
+  {
+   "t": "WebAPI",
+   "n": 31,
+   "unresolved": 0.84
+  },
+  {
+   "t": "HADES",
+   "n": 21,
+   "unresolved": 0.81
+  },
+  {
+   "t": "Achilles",
+   "n": 19,
+   "unresolved": 0.84
+  },
+  {
+   "t": "Broadsea",
+   "n": 15,
+   "unresolved": 0.73
+  },
+  {
+   "t": "DatabaseConnector",
+   "n": 14,
+   "unresolved": 0.71
+  },
+  {
+   "t": "SNOMED",
+   "n": 14,
+   "unresolved": 0.71
+  },
+  {
+   "t": "DataQualityDashboard",
+   "n": 11,
+   "unresolved": 0.73
+  },
+  {
+   "t": "SQL Server",
+   "n": 11,
+   "unresolved": 0.73
+  },
+  {
+   "t": "Usagi",
+   "n": 11,
+   "unresolved": 0.64
+  },
+  {
+   "t": "Postgres",
+   "n": 11,
+   "unresolved": 0.91
+  }
+ ],
+ "need_details": [
+  {
+   "cluster": 2,
+   "label": "Mapping complex source data to OMOP",
+   "need_statement": "Community members need to map complex source data such as combination drugs, clinical trial instruments, survey concepts, family history, radiotherapy and curated national datasets into OMOP without losing meaning.",
+   "why_hard": "OMOP guidance is unclear or non-standardized for these data types, and many data points map with lost granularity or not at all.",
+   "n_need_threads": 26,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 5,
+   "label": "Representing genomic and omics data in OMOP",
+   "need_statement": "Community members need to model NGS, omics, specimen-derived samples and unsupported CRF fields in OMOP using established patterns so genomic and clinical data can be analyzed together.",
+   "why_hard": "OMOP lacks comprehensive omics standards and sample-level entities, OMOP Genomic has gaps, and practical guidance on variant representation and linkage at scale is limited.",
+   "n_need_threads": 19,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 8,
+   "label": "Extending OMOP for AI and interoperability",
+   "need_statement": "Community members need to store ML metadata in OMOP, bridge openEHR and OMOP, support negation for AI/ML, rely on formal artifact specifications, and use OMOP locally or through natural language.",
+   "why_hard": "OHDSI has no established standards for these uses, OMOP's closed-world assumption conflicts with ML needs, and community focus is on federated research rather than local use.",
+   "n_need_threads": 18,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 1,
+   "label": "Missing vocabulary concepts for source codes",
+   "need_statement": "Community members need to map source codes such as ICD-O-3 combinations, ATC vaccines, rare disease codes, DRG and compounded drugs to OMOP standard concepts when the vocabulary lacks the needed concepts or relationships.",
+   "why_hard": "Many source codes have no direct correspondence in the OMOP vocabularies, and Usagi cannot load custom vocabularies for fuzzy matching.",
+   "n_need_threads": 31,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 0,
+   "label": "Expressing complex cohort logic in ATLAS",
+   "need_statement": "Community members need to define cohorts in ATLAS that use episodes, patient ID lists, complex visit timing and negation logic, and to export the definitions as R code for regulatory submission.",
+   "why_hard": "ATLAS lacks support for the Episode table and patient ID lists, its date and inclusion logic does not behave as expected, and it offers no way to extract R code packages.",
+   "n_need_threads": 32,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 3,
+   "label": "Fixing OMOP vocabulary content defects",
+   "need_statement": "Community members need to work with OMOP vocabularies that have correct, complete and stable concepts, including oncology TNM and nodal concepts, laterality, replacements for deprecated concepts and full NAACCR names.",
+   "why_hard": "Vocabularies contain duplicate or truncated concepts, deprecate concepts without replacements, and lack laterality or grouped concepts, so mappings lose information and updates do not scale.",
+   "n_need_threads": 24,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 17,
+   "label": "Running Achilles at scale",
+   "need_statement": "Community members need to run Achilles reliably and with acceptable performance on large or non-standard OMOP databases and get all expected output tables.",
+   "why_hard": "Runtimes vary widely or time out on large tables, analyses fail silently, multi-threading breaks, some dialects error, and functions are undocumented.",
+   "n_need_threads": 10,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 15,
+   "label": "Installing ATLAS and WebAPI",
+   "need_statement": "Community members need to install, build, upgrade and connect ATLAS and WebAPI reliably.",
+   "why_hard": "Maven dependencies and the OHDSI Nexus repository are unavailable, download links are broken, and installation documentation for platforms like RHEL 9 is unclear.",
+   "n_need_threads": 10,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 9,
+   "label": "Community coordination, training and documentation",
+   "need_statement": "Community members need to coordinate collaborations, access up-to-date training materials and documentation, use working learning environments, and reach community resources.",
+   "why_hard": "Training materials are not standardized, the Book of OHDSI is outdated, OHDSI documentation is sparse in Context7, and some resources such as the dashboard are offline.",
+   "n_need_threads": 17,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 7,
+   "label": "Validating cohort comparability across sites",
+   "need_statement": "Community members need to validate phenotype and cohort definitions, detect when sites encode concepts differently, and stratify cohort results by site in multi-site studies.",
+   "why_hard": "Local encoding differences make results silently wrong without showing up in standard data quality tools, ATLAS cannot stratify by site, and phenotype validation tools are opaque.",
+   "n_need_threads": 18,
+   "rhino_fit": "federated_analytics"
+  },
+  {
+   "cluster": 16,
+   "label": "Configuring ATLAS authentication and permissions",
+   "need_statement": "Community members need to configure LDAP or Active Directory authentication and role-based permissions for ATLAS and WebAPI so authenticated users can use the modules they are assigned.",
+   "why_hard": "Authentication fails despite correct configuration, role assignments do not grant access, errors are not logged, and documentation does not explain the setup.",
+   "n_need_threads": 10,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 6,
+   "label": "CDM conventions for drugs, visits and types",
+   "need_statement": "Community members need to know how to represent patient-reported and dispensed drugs, observation visit types, prescription proposals, unmapped values and visit-level costs in OMOP tables.",
+   "why_hard": "OMOP guidance is unclear and community responses conflict, and some source records lack the dates needed to tell record types apart.",
+   "n_need_threads": 19,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 4,
+   "label": "CDM conventions for observation periods and events",
+   "need_statement": "Community members need to know the OMOP CDM conventions for representing derived ages, pregnancy episodes, incomplete questionnaire dates, stillbirths, migration events, observation periods and missed visits.",
+   "why_hard": "Standard guidance is missing or unclear, for example on how observation_period relates to visit_occurrence and on records that lack an observation period.",
+   "n_need_threads": 20,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 20,
+   "label": "Hosting and integrating HADES infrastructure",
+   "need_statement": "Community members need to host OMOP databases and integrate HADES, Arachne and White Rabbit with their applications and cloud authentication.",
+   "why_hard": "Security headers block embedding, versions mismatch between Arachne and HADES, Entra ID and SAML on Azure are unsupported or undocumented, and users lack database hosting experience.",
+   "n_need_threads": 8,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 22,
+   "label": "Large measurement tables and duplicate rows",
+   "need_statement": "Community members need to handle large MEASUREMENT and OBSERVATION tables efficiently, including fast data quality checks and correct handling of duplicate or expanded rows.",
+   "why_hard": "DQD checks run for 40+ hours or freeze, memory settings are ignored, and multiple maps_to_value relationships or repeated samples produce duplicate rows.",
+   "n_need_threads": 7,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 27,
+   "label": "OHDSI support for Trino, Spark and Doris",
+   "need_statement": "Community members need to connect OHDSI tools to OMOP CDMs stored in Trino, Doris or Spark-backed platforms such as UK Biobank RAP.",
+   "why_hard": "DatabaseConnector does not support these backends, and the Trino JDBC driver lacks batch query support.",
+   "n_need_threads": 4,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 19,
+   "label": "Running DataQualityDashboard on SQL Server",
+   "need_statement": "Community members need to connect DataQualityDashboard and DatabaseConnector to SQL Server and run and view DQD results and vocabulary loads without errors.",
+   "why_hard": "Paths with spaces, JDBC and authentication errors, timeouts on large databases, a blank viewer, and hardcoded test thresholds break runs.",
+   "n_need_threads": 8,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 12,
+   "label": "Modeling oncology episodes and treatments",
+   "need_statement": "Community members need to represent oncology disease status, imaging findings, biopsies, screening phases, drug regimens and first-course treatments in OMOP tables, including the Episode table.",
+   "why_hard": "It is unclear which tables and domains to use, current Episode concepts do not cover screening phases, and recording procedures in several tables risks duplication.",
+   "n_need_threads": 13,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 11,
+   "label": "Richer, portable phenotype and concept definitions",
+   "need_statement": "Community members need to build concept sets and phenotypes that use richer vocabulary relationships, access concepts and phenotypes programmatically, and share reproducible definitions.",
+   "why_hard": "Circe concept set expressions support only hierarchy and limited mapping, Phenotype Library data must be downloaded manually, and published definitions lack implementation detail.",
+   "n_need_threads": 14,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 18,
+   "label": "Reusable ETL pipelines into OMOP",
+   "need_statement": "Community members need to convert sources such as CPRD, OpenMRS, microbiology data and Synthea into OMOP CDM using working, reusable ETL pipelines and clear specifications.",
+   "why_hard": "ETL-CDMBuilder fails on CPRD, open-source pipelines for OpenMRS are missing, Metadata and microbiology specifications are vague, and ETL-Synthea exists only in R.",
+   "n_need_threads": 9,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 26,
+   "label": "Representing clinical notes and NLP output",
+   "need_statement": "Community members need to store clinical notes and NLP-extracted findings in NOTE and NOTE_NLP and link them to clinical event tables following clear conventions.",
+   "why_hard": "It is unclear which type concepts to use, whether undated mentions belong in OBSERVATION, how to split report components into rows, and how to link NLP records to events.",
+   "n_need_threads": 6,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 13,
+   "label": "Validating CDM compliance and structure",
+   "need_statement": "Community members need to check OMOP compliance of CSVs, databases and generated SQL against authoritative CDM definitions using reliable validators.",
+   "why_hard": "There is no clear single source of truth or formal SQL compliance standard, and cdmInspection and DataQualityDashboard crash or report confusing results.",
+   "n_need_threads": 13,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 23,
+   "label": "Deploying Broadsea reliably",
+   "need_statement": "Community members need to deploy Broadsea on Windows and AWS with pinned versions, working SAML or Azure authentication, and a usable local development workflow.",
+   "why_hard": "Authentication guidance is missing, Windows secrets files fail, Docker Compose pulls unpinned latest versions, and code changes do not show up in containers.",
+   "n_need_threads": 6,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 14,
+   "label": "CPT4 vocabulary processing and tool failures",
+   "need_statement": "Community members need to process CPT4 vocabulary updates, track vocabulary versions programmatically, and run OHDSI result-export and example-study tools without errors.",
+   "why_hard": "CPT4 processing crashes, runs out of memory or takes days, delta generation fails, and version names cannot be used as git tags.",
+   "n_need_threads": 10,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 10,
+   "label": "Domain assignment for labs and measurements",
+   "need_statement": "Community members need to decide the correct OMOP domain for lab tests, screening codes, qualitative results, hearing tests and scores when mapping source data.",
+   "why_hard": "The boundary between Procedure, Observation and Measurement is ambiguous, LOINC answer relationships are incomplete, and vocabularies assign domains inconsistently.",
+   "n_need_threads": 14,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 28,
+   "label": "Vocabulary release accuracy and maintenance",
+   "need_statement": "Community members need to rely on accurate vocabulary release metadata, download historical vocabulary versions, and get ongoing maintenance of vocabularies such as UK dm+d.",
+   "why_hard": "Athena returns wrong versions and dates, the backlog of foundational issues is frozen while central development is maintenance-focused, and dm+d has not been updated since May 2023.",
+   "n_need_threads": 4,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 21,
+   "label": "Incorrect ICD-10 to SNOMED mappings",
+   "need_statement": "Community members need to map ICD-10 codes to correctly specific SNOMED concepts that are reachable through CONCEPT_ANCESTOR so that cohorts capture all coded patients.",
+   "why_hard": "Some ICD-10 codes map to overly broad or wrong concepts or are missing from the hierarchy, so hierarchy-based code lists miss thousands of patients.",
+   "n_need_threads": 7,
+   "rhino_fit": "data_harmonization"
+  },
+  {
+   "cluster": 24,
+   "label": "Creating and maintaining ATLAS concept sets",
+   "need_statement": "Community members need to create, save and maintain large numbers of concept sets in ATLAS, including after vocabulary and software updates.",
+   "why_hard": "Vocabulary updates break existing concept sets, there is no clear way to automate creating thousands of them, and upgrades cause save and authorization errors without logs.",
+   "n_need_threads": 6,
+   "rhino_fit": "none"
+  },
+  {
+   "cluster": 25,
+   "label": "ATC to RxNorm drug mapping",
+   "need_statement": "Community members need to map ATC drug classes to RxNorm concepts consistently for ETL, drug eras and class-level analysis.",
+   "why_hard": "ATC-RxNorm relationships are inconsistent and come in several types, hierarchies are incomplete, ATC has ambiguous structure, and ingredient mapping loses dosage information.",
+   "n_need_threads": 6,
+   "rhino_fit": "data_harmonization"
+  }
+ ]
+}

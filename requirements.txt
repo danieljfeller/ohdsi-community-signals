@@ -1,0 +1,16 @@
+pandas>=2.2
+numpy<2.3
+pyarrow>=16
+duckdb>=1.0
+requests>=2.32
+tqdm>=4.66
+beautifulsoup4>=4.12
+lxml>=5
+scikit-learn>=1.5
+sentence-transformers>=3.0
+bertopic>=0.16.4
+umap-learn>=0.5.6
+hdbscan>=0.8.38
+gensim>=4.3
+plotly>=5.22
+matplotlib>=3.9

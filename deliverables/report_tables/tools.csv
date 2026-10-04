@@ -1,0 +1,96 @@
+t,n,unresolved
+CommonDataModel,134,0.68
+Atlas,110,0.72
+Vocabulary,107,0.66
+Athena,83,0.66
+R,33,0.64
+WebAPI,31,0.84
+HADES,21,0.81
+Achilles,19,0.84
+Broadsea,15,0.73
+DatabaseConnector,14,0.71
+SNOMED,14,0.71
+DataQualityDashboard,11,0.73
+SQL Server,11,0.73
+Usagi,11,0.64
+Postgres,11,0.91
+Docker,9,0.56
+SQL,9,0.78
+Python,9,0.78
+PatientLevelPrediction,7,0.43
+Strategus,7,0.43
+LOINC,7,0.71
+OHDSI,5,1.0
+CohortMethod,5,0.8
+RxNorm,5,0.8
+SqlRender,5,0.6
+Synthea,5,0.2
+Eunomia,5,0.4
+CohortDiagnostics,4,0.5
+Capr,4,0.25
+Snowflake,4,1.0
+Databricks,4,1.0
+FeatureExtraction,4,0.5
+Maven,3,0.67
+WhiteRabbit,3,0.67
+Epic,2,0.5
+Measurement,2,0.0
+Trino,2,1.0
+Java,2,0.5
+GIS,2,1.0
+ARTEMIS,2,1.0
+CirceR,2,0.0
+Characterization,2,0.5
+DuckDB,2,1.0
+AWS,2,1.0
+Ares,2,0.5
+CVX,2,0.5
+Specimen,1,0.0
+CemConnector,1,1.0
+SNOMED CT,1,1.0
+SPL,1,1.0
+Carrot,1,1.0
+Cancer Modifier Vocabulary,1,1.0
+SQLMesh,1,1.0
+SkeletonComparativeEffectStudy,1,1.0
+Spark,1,1.0
+CDMBuilder,1,1.0
+CPRD,1,1.0
+Circe,1,1.0
+BigQuery,1,1.0
+Themis,1,1.0
+BNF,1,0.0
+Azure,1,0.0
+Arachne,1,1.0
+Windows,1,0.0
+cdmInspection,1,0.0
+dbt,1,1.0
+dm+d,1,0.0
+RadLex,1,0.0
+ETL-CDMBuilder,1,1.0
+FHIR,1,1.0
+CohortConstructor,1,0.0
+ETL,1,1.0
+Genomic-CDM,1,1.0
+GitHub,1,1.0
+GitHub Actions,1,1.0
+ATC,1,1.0
+HPO,1,1.0
+Hydra,1,0.0
+ICD10PCS,1,0.0
+IRIS,1,0.0
+DrugBank,1,1.0
+Keun,1,1.0
+Kubernetes,1,1.0
+Doris,1,1.0
+Cyclops,1,0.0
+Cost,1,1.0
+MethodEvaluation,1,0.0
+NAACCR,1,1.0
+Context7,1,1.0
+OHDSI Vocabulary,1,1.0
+OMOP Extension,1,0.0
+OMOP Genomic CDM,1,1.0
+CohortGenerator,1,1.0
+Phenotype Library,1,0.0
+other,1,1.0

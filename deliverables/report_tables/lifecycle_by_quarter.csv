@@ -1,0 +1,14 @@
+ls,2024 Q4,2025 Q1,2025 Q2,2025 Q3,2025 Q4,2026 Q1,2026 Q2,2026 Q3
+characterization,1,13,7,6,5,1,8,3
+cohort_definition,4,8,7,12,1,1,2,5
+community_process,6,8,0,10,6,2,5,9
+data_quality,7,6,8,5,10,6,5,14
+estimation,3,5,1,6,0,1,2,1
+etl_cdm_conversion,19,18,13,20,12,14,13,7
+governance_privacy,0,3,2,6,2,0,2,1
+infrastructure_deployment,17,14,4,9,6,6,5,4
+learning_onboarding,10,5,2,2,2,4,6,3
+network_study_execution,0,7,0,3,0,1,3,5
+prediction_ml,2,2,1,3,0,3,2,0
+results_sharing_dissemination,0,1,3,3,0,1,0,0
+vocabulary_mapping,20,20,17,27,14,7,9,16

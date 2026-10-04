@@ -1,0 +1,839 @@
+[
+{
+"k": "kicker",
+"runs": [
+{
+"t": "Community research · Observational health data"
+}
+]
+},
+{
+"k": "title",
+"runs": [
+{
+"t": "What two years of OHDSI forum threads say about the community’s technology needs"
+}
+]
+},
+{
+"k": "standfirst",
+"runs": [
+{
+"t": "We read every public thread posted to the OHDSI Forums between October 2024 and October 2026 and coded each one for the technical problem behind it. The result is a ranked map of 29 needs. The hardest are not about running studies. They are about getting data into OMOP faithfully, keeping the platform running, and trusting that two sites mean the same thing."
+}
+]
+},
+{
+"k": "byline",
+"text": "Daniel Feller, PhD · Rhino Federated Computing · October 2026 · 11 min read"
+},
+{
+"k": "abstract",
+"items": [
+{
+"h": "Background",
+"runs": [
+{
+"t": "OHDSI is the largest open community working with observational health data on a shared model, the OMOP Common Data Model. Its public forum is one of the few places where the technical friction of that work is written down in the words of the people doing it."
+}
+]
+},
+{
+"h": "Methods",
+"runs": [
+{
+"t": "776 forum topics (2,164 posts) were collected through the forum’s public API, pseudonymized, and coded by a language model against a fixed schema: post type, lifecycle stage, tools, pain point, severity and multi-site context. An independent second coder re-coded an 80-thread sample. Pain-point sentences were clustered into a bottom-up taxonomy of 29 needs and scored on volume, severity, unresolved share and trend."
+}
+]
+},
+{
+"h": "Results",
+"runs": [
+{
+"t": "429 threads carried a technical need. Vocabulary mapping and ETL accounted for 43% of need statements and 12 of 29 need clusters; infrastructure and data quality carried the highest severity, with a third of infrastructure threads rated blockers. Threads involving more than one site were 11% of the corpus and concerned comparability of results rather than execution of studies."
+}
+]
+},
+{
+"h": "Conclusions",
+"runs": [
+{
+"t": "The community’s dominant technology need is harmonization, at the level of specific failures: combination drugs, oncology and genomic concepts, lab domains, hierarchy-unreachable mappings. The federated need expressed is cross-site comparability and sharing without patient-level data. Federated learning does not appear."
+}
+]
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "Why read a forum?"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Every research community leaves a record of what it finds hard. Papers describe what worked. Forums describe what did not, in the moment, in the words of the person who was stuck. For OHDSI (the Observational Health Data Sciences and Informatics collaborative), that record sits at forums.ohdsi.org, a public Discourse site with more than 8,000 topics since 2014."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "We work on federated computing for healthcare, and OHDSI’s network studies, where analysis code travels to data partners and only aggregate results travel back, are a close cousin of what we build. Before deciding what to build next for this community, we wanted a reading of its needs that did not start from our product. So we started from the text."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "One limitation shapes everything that follows and is stated up front. Much of OHDSI’s working conversation has moved to Microsoft Teams, which is not public. The forum is therefore the public, implementer-heavy slice of the community: 72% of the people who posted a substantive thread posted once. It is a good instrument for what first-time and solo implementers run into, and a poor one for what experienced network-study coordinators discuss among themselves. The needs below are real; their relative weights would shift with a Teams corpus, and we say where we think they would shift."
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "1. Where the pain concentrates"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Each of the 429 substantive threads was tagged with the stage of the OHDSI lifecycle it concerned, from converting source data, through vocabulary mapping and data quality, to cohort building, analysis and sharing results. Figure 1 places each stage by how many threads it attracted and how severe they were."
+}
+]
+},
+{
+"k": "figure",
+"png": "report/docx/figs/fig1.png",
+"caption": [
+{
+"t": "Figure 1.",
+"b": true
+},
+{
+"t": " Thirteen lifecycle stages positioned by the number of need threads tagged with the stage (horizontal; a thread may carry several tags) and mean coded severity (vertical; 0 none, 1 minor, 2 major, 3 blocker). Bubble radius encodes the share of the stage’s threads rated blocking. Harmonization stages have the volume; infrastructure has the severity."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Two regions matter. Far right and moderate severity: "
+},
+{
+"t": "vocabulary mapping",
+"b": true
+},
+{
+"t": " (127 need threads) and "
+},
+{
+"t": "ETL / CDM conversion",
+"b": true
+},
+{
+"t": " (114). Together they account for 43% of all need statements. Their severity is mostly “major” rather than “blocker” because the work continues around the gap, with lost information rather than a halted pipeline."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Upper middle and large bubbles: "
+},
+{
+"t": "infrastructure and deployment",
+"b": true
+},
+{
+"t": " (64) and "
+},
+{
+"t": "data quality",
+"b": true
+},
+{
+"t": " (60). These are the threads about installing Atlas and WebAPI, authenticating against LDAP, and running Achilles or the Data Quality Dashboard on a large database. A third of infrastructure threads were blockers, the highest share of any stage."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Notice what is small. "
+},
+{
+"t": "Network study execution",
+"b": true
+},
+{
+"t": ", the activity OHDSI is best known for, appears in 13 threads. Strategus, the framework that runs network studies, is named seven times in two years. This is partly the Teams effect described above: study coordinators are the group most likely to have left the forum. But it is also consistent with what the multi-site threads that do exist say (section 4): the difficulty people describe is not executing a study across sites, it is trusting the result."
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "2. The tools people get stuck on"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "The coder recorded every OHDSI tool a thread named or clearly implied. Figure 2 counts them."
+}
+]
+},
+{
+"k": "figure",
+"png": "report/docx/figs/fig2.png",
+"caption": [
+{
+"t": "Figure 2.",
+"b": true
+},
+{
+"t": " OHDSI tools named in the 429 substantive threads. The CDM itself, Atlas, the standard vocabularies and Athena (the vocabulary download service) dominate; the back-end stack (WebAPI, HADES, Achilles, Broadsea, DatabaseConnector) forms a second tier. Programming languages are omitted."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Four things account for most of the stuck moments: the CDM specification itself (which table, which domain, which type concept), Atlas (cohort logic, concept sets, installation, authentication), the standard vocabularies (missing or wrong concepts), and Athena. The second tier is the deployment stack. Analysis packages are rare: PatientLevelPrediction and Strategus are named seven times each, CohortMethod and CohortDiagnostics fewer. People on the forum are, overwhelmingly, trying to build and keep a CDM, not yet to analyze one."
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "3. A taxonomy of 29 needs"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Topic models over raw forum text are easy to run and hard to read; on this corpus one produced topics called “symposium” and “community calls.” We took a different route. The coder wrote a one-sentence pain point for each thread that had one (392 sentences), and we clustered those sentences instead. Each cluster was then labeled, given a need statement grounded in its members, and scored."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "The score, which we call the Unmet Need Index, is a weighted rank of five components: volume (0.35), unresolved share (0.25), mean severity (0.20), positive trend (0.10) and unresolved volume (0.10). It is deliberately simple and every component is published so a reader can re-weight it. Unresolved share is included because a question the community could not answer is a stronger signal of a gap than one it could, but we treat it with caution given the Teams limitation."
+}
+]
+},
+{
+"k": "figure",
+"png": "report/docx/figs/fig3.png",
+"caption": [
+{
+"t": "Figure 3.",
+"b": true
+},
+{
+"t": " Twenty-nine bottom-up need clusters ranked by Unmet Need Index. Bar color shows the capability area the need maps to after discovery: data harmonization (12 clusters, 194 pain points), federated analytics (1 cluster, 18), or none, meaning tool bugs, installation, authentication, performance and community process (16 clusters, 177). Right-hand labels give thread count and the share not fully resolved on the forum."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Half of all pain points (194 of 389 clustered) fall into twelve harmonization clusters. Three of the top four needs are about getting data into OMOP. Merging the two vocabulary clusters, as the labeling review suggested, makes “vocabulary content gaps and defects” the single largest need at 55 threads. What follows is the technical substance of each group, drawn from the need statements and the threads behind them."
+}
+]
+},
+{
+"k": "h3",
+"runs": [
+{
+"t": "3.1 Harmonization: getting data into OMOP without losing it"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Vocabulary gaps and defects (55 threads).",
+"b": true
+},
+{
+"t": " Source codes with no standard concept to map to: ICD-O-3 site, histology and behavior combinations from tumor registries, ATC vaccine classes, rare-disease codes, DRGs, compounded drugs. Where concepts exist they are sometimes wrong: duplicate TNM pathological M concepts with inconsistent classification, concepts deprecated without a replacement, NAACCR names truncated, pathology nodal groupings the vocabulary cannot express. Usagi, the mapping tool, cannot load a custom vocabulary for fuzzy matching, so a site that builds its own extension gets no tooling help with it."
+}
+]
+},
+{
+"k": "quote",
+"text": "Several ICD-O-3 site/histology/behavior code combinations present in our source data do not exist.",
+"cite": "Tumor registry conversion, 2025."
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Mapping complex source data (26).",
+"b": true
+},
+{
+"t": " Combination drugs where strength is known for the product but not per ingredient; clinical-trial instruments such as cognitive scales and randomization variables; compound survey concepts from a national specification; family history; radiotherapy. The guidance is unclear or absent and the mappings that exist lose granularity."
+}
+]
+},
+{
+"k": "quote",
+"text": "I don’t have information on how the total 55 mg dose is split between the two ingredients.",
+"cite": "Mapping a combination product to RxNorm ingredients discards strength."
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Hierarchy-unreachable and overly broad mappings (7, but quantified).",
+"b": true
+},
+{
+"t": " Two threads measured the consequence of mapping defects rather than describing it. An ICD-10-CM code mapped to a sibling SNOMED concept that is not reachable through CONCEPT_ANCESTOR made 897 coded patients invisible to any hierarchy-based cohort. Another member compared hierarchy-generated ICD-10 code lists against manual enumeration for congenital heart disease and found 21,667 patients missing. These are the strongest arguments on the forum for mapping validation as a product feature rather than a review step."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "CDM conventions (39 across two clusters).",
+"b": true
+},
+{
+"t": " Where to put derived age, pregnancy episodes, stillbirths, migration events, missed visits, patient-reported drugs without dates, dispensed versus prescribed records, observation-type visits, unmapped values and visit-level costs; how observation_period relates to visit_occurrence; what to do with records that have no observation period at all. The answers members receive conflict with one another. An opinionated, maintained conventions reference does not exist and would resolve a measurable share of this."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Oncology and genomics (32 across two clusters).",
+"b": true
+},
+{
+"t": " Disease status, imaging findings, biopsies, screening phases, regimens and first-course treatment do not fit the Episode table as currently specified; recording a procedure in several tables risks duplication. For genomics there is no production pattern at all: how to represent NGS and comprehensive genomic profiling results, germline versus somatic variants, specimen-level entities, and how to link variants to phenotypes at scale. The OMOP Genomic extension is described by its own call for input as having gaps."
+}
+]
+},
+{
+"k": "quote",
+"text": "Most CDMs don’t yet have genomic data.",
+"cite": "On the feasibility of Mendelian randomization across OMOP sites, 2026."
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Lab domain assignment (14), drug class mapping (6), ETL pipelines (9), notes and NLP (6).",
+"b": true
+},
+{
+"t": " The boundary between Procedure, Measurement and Observation is ambiguous for tests without results, screening encounters and qualitative findings; LOINC answer relationships are incomplete. ATC to RxNorm relationships come in several inconsistent types and ingredient mapping drops dose. Reusable open-source ETL pipelines are missing for CPRD, OpenMRS and microbiology data, and the Synthea ETL exists only in R. Conventions for NOTE and NOTE_NLP, and for linking extracted mentions to clinical events, are unclear."
+}
+]
+},
+{
+"k": "h3",
+"runs": [
+{
+"t": "3.2 Platform: keeping the stack running"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "These needs carry the forum’s highest severity. "
+},
+{
+"t": "Installing Atlas and WebAPI (10)",
+"b": true
+},
+{
+"t": ": Maven dependency resolution fails when the OHDSI Nexus repository is down, download links break, and documentation for current Linux distributions is thin. "
+},
+{
+"t": "Authentication and permissions (16 across two clusters)",
+"b": true
+},
+{
+"t": ": LDAP and Active Directory return “Bad credentials” despite verified configuration; users authenticate but have no permissions despite assigned roles; SAML and Entra ID on Azure are undocumented or unsupported; errors are not logged. "
+},
+{
+"t": "Achilles at scale (10)",
+"b": true
+},
+{
+"t": ": a single analysis that runs in 18 seconds one day and over an hour the next, runs that time out past 20 hours on large tables, output tables that are silently not created, multi-threading that breaks. "
+},
+{
+"t": "Data Quality Dashboard on large data (15 across two clusters)",
+"b": true
+},
+{
+"t": ": a plausibility check that ran 40 hours without completing on a large measurement table, JVM memory settings that are ignored, a viewer that renders blank. "
+},
+{
+"t": "Back-end support (4)",
+"b": true
+},
+{
+"t": ": DatabaseConnector does not support Trino, Spark or Doris, which rules out platforms such as the UK Biobank research environment."
+}
+]
+},
+{
+"k": "quote",
+"text": "Analysis 117 normally runs in 18 seconds but sometimes takes an hour or more.",
+"cite": "Achilles on PostgreSQL, 2025."
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "None of these are research problems. They are the daily experience of the people who would run any new platform, and they set the bar: anything that requires a comparable installation effort will be judged against the weeks it took to get Atlas working."
+}
+]
+},
+{
+"k": "h3",
+"runs": [
+{
+"t": "3.3 Analytics tooling: expressing the question"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Complex cohort logic in Atlas (32).",
+"b": true
+},
+{
+"t": " Cohorts that need the Episode table, a pre-defined list of patient IDs, cohort start defined as the latest of several events, negation logic, or export of the definition as an R package for a regulatory submission. Atlas supports none of these directly, and its date and inclusion-rule behavior surprises experienced users. "
+},
+{
+"t": "Portable phenotypes and concept sets (20 across two clusters)",
+"b": true
+},
+{
+"t": ": Circe concept-set expressions support hierarchy but not lateral relationships; the Phenotype Library has to be downloaded by hand; published definitions are hard to reproduce outside OHDSI; vocabulary updates break existing concept sets, and there is no supported way to create thousands of them programmatically. "
+},
+{
+"t": "CDM compliance validation (13)",
+"b": true
+},
+{
+"t": ": no single authoritative, machine-readable source of truth for the CDM, so CSV validators, cdmInspection and the Data Quality Dashboard disagree or crash."
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "4. The multi-site slice"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Forty-six substantive threads (11%) involved more than one institution, a network study, or data that could not leave a site. We flagged these conservatively: a thread had to describe multiple sites or partners, not merely use the word “network.”"
+}
+]
+},
+{
+"k": "figure",
+"png": "report/docx/figs/fig4.png",
+"caption": [
+{
+"t": "Figure 4.",
+"b": true
+},
+{
+"t": " Each dot is one substantive thread involving more than one site, placed in the quarter it was posted. Filled dots were not fully resolved on the forum; hollow dots were. Multi-site questions arrived steadily across the two years."
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Read together, the 35 multi-site threads with a stated pain point make one argument. Nobody asks how to run a study across sites. They ask how to trust the result when they do."
+}
+]
+},
+{
+"k": "quote",
+"text": "When two sites report a cohort of heart failure patients, they may not mean the same thing.",
+"cite": "A call for collaborators on detecting cross-site semantic divergence, 2026."
+},
+{
+"k": "quote",
+"text": "Any differences could reflect differences in how each dataset was mapped, undermining conclusions.",
+"cite": "On validating two independently converted OMOP datasets against each other."
+},
+{
+"k": "quote",
+"text": "Sites map drugs to different levels of granularity … populate their quantity differently.",
+"cite": "On deriving a daily dose consistently across a network."
+},
+{
+"k": "quote",
+"text": "I want to share the prediction results with external collaborators, I’m not allowed to share patient level tables.",
+"cite": "On publishing a prediction model’s outputs without the underlying data."
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "The technical asks fall into three groups."
+}
+]
+},
+{
+"k": "ul",
+"items": [
+[
+{
+"t": "Comparability.",
+"b": true
+},
+{
+"t": " Detect when sites encode the same clinical concept differently; validate one site’s conversion against another’s; stratify cohort counts and characterization results by site, which Atlas cannot do; derive doses consistently when sites populate quantity differently; handle trial criteria that are observable at some sites and only proxied at others."
+}
+],
+[
+{
+"t": "Sharing without moving patient data.",
+"b": true
+},
+{
+"t": " Prediction model outputs and aggregate results that collaborators can use without access to patient-level tables; phenotype definitions that travel with their implementation rather than “buried in 200 lines of SQL with implicit assumptions.”"
+}
+],
+[
+{
+"t": "Provenance and governance.",
+"b": true
+},
+{
+"t": " Tagging which registry or source a record came from when several share one CDM, so that data stewards “can check and verify the data they are supposed to have”; understanding what staffing and capability a sustainable OMOP infrastructure requires."
+}
+]
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "In two years exactly one thread reported a federated execution failing (a Korean FeederNet estimation run). Federated learning, as a request, does not appear. With a Teams corpus we would expect more execution questions, since that is where Strategus studies are coordinated; we would not expect the comparability theme to disappear, because it is a property of the data, not the venue."
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "5. What this means"
+}
+]
+},
+{
+"k": "h3",
+"runs": [
+{
+"t": "For OHDSI"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "The vocabulary and convention questions repeat. Members ask the same thing about pregnancy episodes, patient-reported drugs without dates, lab domains and oncology episodes, and the answers they receive conflict. An opinionated conventions reference maintained alongside the CDM, and a mapping validator that reports hierarchy-unreachable codes, would address the two most quantified complaints on the forum. The genomic and oncology gaps are known to the relevant workgroups; the forum shows how many implementers are waiting on them."
+}
+]
+},
+{
+"k": "h3",
+"runs": [
+{
+"t": "For industry"
+}
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Anyone building for this community should expect to be compared against an Atlas installation that took weeks and an LDAP integration that never worked. Deployment is table stakes. Beyond that, the data points to two things worth building and one thing not to claim."
+}
+]
+},
+{
+"k": "ul",
+"items": [
+[
+{
+"t": "Build for harmonization at the level of the specific failure.",
+"b": true
+},
+{
+"t": " Dose preserved through combination-drug mapping, oncology and genomic concepts that exist, lab domains assigned consistently, and validation that flags hierarchy-unreachable codes before they silently drop patients from a cohort."
+}
+],
+[
+{
+"t": "Build for cross-site comparability.",
+"b": true
+},
+{
+"t": " The federated need the forum expresses is “prove the sites agree,” not “run the study.” Detecting semantic divergence between sites, validating two conversions against each other, and site-stratified summaries are where federated analytics and harmonization meet."
+}
+],
+[
+{
+"t": "Do not position federated learning as a response to OHDSI demand.",
+"b": true
+},
+{
+"t": " It is not in the record, and difficulty executing network studies is barely in it. The struggle is comparability and sharing."
+}
+]
+]
+},
+{
+"k": "p",
+"runs": [
+{
+"t": "Our own interest is declared: Rhino Federated Computing builds harmonization and federated analytics tooling, and the Cancer AI Alliance work we support sits squarely in the oncology and genomics gaps the forum describes. That is a reason to be transparent about method, which is why every table behind these figures and the full coding schema are published with the report."
+}
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "Methods in brief"
+}
+]
+},
+{
+"k": "note",
+"paras": [
+[
+{
+"t": "Corpus.",
+"b": true
+},
+{
+"t": " All public topics on forums.ohdsi.org created 1 Oct 2024 to 1 Oct 2026, collected 4 Oct 2026 through the Discourse JSON API at one request per 1.6 seconds. 776 topics, 2,164 posts, 334 distinct authors. Author handles replaced by salted hashes; emails and @-mentions scrubbed before any text left the machine. GitHub issues from OHDSI’s 390 repositories were collected and excluded after a pilot showed 73% were maintainers’ own task tracking."
+}
+],
+[
+{
+"t": "Coding.",
+"b": true
+},
+{
+"t": " Each thread was reduced to a digest (title, opening post to 350 words, up to four replies) and coded by Claude Haiku 4.5 against a fixed schema in batches of 45, orchestrated through Claude Code. Fields: post type, lifecycle stage (multi-label), tools, pain point, job-to-be-done, severity, workaround present, resolution status, multi-site context, harmonization context, a verbatim evidence quote under 25 words, and confidence. 773 of 776 threads were coded; 429 were substantive (questions, bug reports, feature requests, discussions) and the rest announcements and event or job notices."
+}
+],
+[
+{
+"t": "Reliability.",
+"b": true
+},
+{
+"t": " An 80-thread sample stratified by forum category was independently re-coded by Claude Sonnet 5.5, which did not see the first coder’s output."
+}
+]
+]
+},
+{
+"k": "figure",
+"png": "report/docx/figs/fig5.png",
+"caption": [
+{
+"t": "Figure 5.",
+"b": true
+},
+{
+"t": " Agreement between the primary coder and an independent re-coder on 80 threads, as Cohen’s κ with percent agreement. Shaded bands follow the Landis and Koch convention. Lifecycle stage, a multi-label field, had a mean Jaccard overlap of 0.69 (not shown)."
+}
+]
+},
+{
+"k": "note",
+"paras": [
+[
+{
+"t": "Agreement was strong on the fields this post depends on: whether a thread contained a pain point (κ 0.90), whether it concerned harmonization (0.77), post type (0.70) and severity (0.60). Resolution status was weak (0.36), with disagreement concentrated between “partially” and “resolved.” We therefore anchored “no reply” on thread metadata (no post by anyone other than the author) and use the coder’s judgment only for answered threads. Unresolved share enters the index with that definition."
+}
+],
+[
+{
+"t": "Taxonomy.",
+"b": true
+},
+{
+"t": " 392 pain-point sentences were embedded (bge-small-en-v1.5) and clustered with Ward linkage into 30 clusters; three singletons were dropped. Clusters were labeled and mapped to a capability area with a written rationale by Claude Opus 5.5, then reviewed by the author. A BERTopic model over raw opening posts served as a cross-check and recovered the same major themes."
+}
+],
+[
+{
+"t": "Scoring.",
+"b": true
+},
+{
+"t": " The Unmet Need Index is a weighted sum of rank-normalized volume (0.35), unresolved share (0.25), mean severity (0.20), positive quarterly trend (0.10) and unresolved volume (0.10)."
+}
+]
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "AI use, provenance and code"
+}
+]
+},
+{
+"k": "note",
+"paras": [
+[
+{
+"t": "Date of analysis.",
+"b": true
+},
+{
+"t": " Data were collected and analyzed on 4 October 2026. The window covers topics created 1 October 2024 to 1 October 2026."
+}
+],
+[
+{
+"t": "AI disclosure.",
+"b": true
+},
+{
+"t": " This study used large language models as instruments, and this post was drafted with one. Specifically: the collection, processing and analysis pipeline was written and run with Claude Code, using Claude Fable 5.1 (claude-fable-5-1) as the orchestrating model; the 773 threads were coded by Claude Haiku 4.5; the 80-thread reliability sample was independently re-coded by Claude Sonnet 5.5; the 29 need clusters were labeled, given need statements and mapped to capability areas by Claude Opus 5.5; the figures and the text of this post were drafted by Claude Fable 5.1 from the resulting tables. The author set the research questions, the coding schema, the scope decisions (including excluding GitHub issues), reviewed the cluster labels and capability mappings, and edited the text. Every quantitative claim in the post traces to a table in the repository; the model-generated labels and need statements are published alongside the metrics so readers can judge them."
+}
+],
+[
+{
+"t": "Code and data.",
+"b": true
+},
+{
+"t": " The collector, the normalization and pseudonymization step, the coding schema and prompts, the clustering and scoring scripts, the figure generator for this post, the coded dataset (one row per thread, pseudonymized) and the needs taxonomy are at "
+},
+{
+"t": "github.com/danieljfeller/ohdsi-community-signals",
+"link": "https://github.com/danieljfeller/ohdsi-community-signals"
+},
+{
+"t": ". Raw forum text is not redistributed; the collector reproduces it from the public API."
+}
+]
+]
+},
+{
+"k": "h2",
+"runs": [
+{
+"t": "Limitations"
+}
+]
+},
+{
+"k": "ul",
+"items": [
+[
+{
+"t": "The Teams migration.",
+"b": true
+},
+{
+"t": " OHDSI workgroups and network studies are coordinated in Microsoft Teams, which is not public and was not available to us. The forum over-represents first-time and solo implementers and under-represents study coordinators and methodologists. Two consequences follow. Platform and harmonization needs are probably over-weighted relative to analysis and execution needs. And the forum’s falling reply rates over the window reflect the venue losing its answerers to Teams at least as much as any change in the problems themselves, which is why this post does not interpret them."
+}
+],
+[
+{
+"t": "Survivorship.",
+"b": true
+},
+{
+"t": " People who abandoned OHDSI tooling without posting leave no trace."
+}
+],
+[
+{
+"t": "Machine coding.",
+"b": true
+},
+{
+"t": " The coder is a language model; its agreement with an independent coder is reported rather than assumed, and the weakest field was replaced with a metadata definition."
+}
+],
+[
+{
+"t": "Small counts.",
+"b": true
+},
+{
+"t": " Many need clusters have fewer than ten threads. Rankings within the lower half of Figure 3 should be read as groups, not an order."
+}
+]
+]
+},
+{
+"k": "foot",
+"runs": [
+{
+"t": "Data and code: the coded dataset (one row per thread, pseudonymized), the 29-need taxonomy with metrics and rationales, all figure tables, the coding schema and the collection and analysis scripts are at "
+},
+{
+"t": "github.com/danieljfeller/ohdsi-community-signals",
+"link": "https://github.com/danieljfeller/ohdsi-community-signals"
+},
+{
+"t": ". Quotes are reproduced verbatim, shortened to under 25 words, and unattributed; the forum is public, but the people on it did not post for a study. If one of the quotes is yours and you would prefer it removed, write to the author."
+}
+]
+}
+]
